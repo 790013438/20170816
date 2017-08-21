@@ -1,0 +1,51 @@
+@import "compass/css3/box-sizing";
+@import "compass/css3/transition";
+
+*{
+    @include box-sizing(border-box);
+}
+input {
+    margin: 0;
+    font-size: 100%;
+    vertical-align: middle;
+    @include transition(all 100ms linear);
+    font-family: "Hiragino Sans GB", "Microsoft Yahei", Arial, sans-serif;
+    color: #111;
+}
+.a {
+    &-input {
+        &-text{
+            border: 1px solid #a6a6a6;
+            border-top-color: #949494;
+            border-radius: 3px;
+            box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
+            outline: 0;
+            background-color: #fff;
+            height: 31px;
+            padding: 3px 7px;
+            line-height: normal;
+        }
+    }
+    &-row {
+        @extend .a-span12;
+        &:after {
+            dispaly: table;
+            content: "";
+            line-height: 0;
+            font-size: 0;
+        }
+        &:before {
+            @extend .a-row:after;
+        }
+        &:after {
+            clear:both;
+        }
+    }
+    &-span12 {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+input[type=email] {
+    @extend .a-input-text;
+}

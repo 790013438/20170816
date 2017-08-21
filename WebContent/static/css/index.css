@@ -1,0 +1,44 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+  -moz-transition: all 100ms linear;
+  -o-transition: all 100ms linear;
+  -webkit-transition: all 100ms linear;
+  transition: all 100ms linear;
+  font-family: "Hiragino Sans GB", "Microsoft Yahei", Arial, sans-serif;
+  color: #111;
+}
+
+.a-input-text, input[type=email] {
+  border: 1px solid #a6a6a6;
+  border-top-color: #949494;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5), 0 1px 0 rgba(0, 0, 0, 0.07) inset;
+  outline: 0;
+  background-color: #fff;
+  height: 31px;
+  padding: 3px 7px;
+  line-height: normal;
+}
+.a-row:after, .a-row:before {
+  dispaly: table;
+  content: "";
+  line-height: 0;
+  font-size: 0;
+}
+.a-row:after, .a-row:before {
+  clear: both;
+}
+.a-span12, .a-row {
+  width: 100%;
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=index.css.map */
